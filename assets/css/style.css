@@ -5,8 +5,11 @@
 }
 
 html{
+    scroll-behavior: smooth;
     font-family: "Lato", sans-serif;
+
 }
+/* Common */
 .clear
 {
     clear: both;
@@ -15,7 +18,75 @@ html{
 {
     color: #fff;
 }
+.text-center
+{
+    text-align: center !important;
+}
+.full-right
+{
+    float: right;
+}
+.row
+{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content:"";
+    display: block;
+    clear: both;
+
+}
+.col
+{
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third
+{
+    width: 33.3333333%;
+
+}
+.col-half
+{
+    width: 50%;
+}
+.col-full
+{
+    width: 100%;
+}
+.mt-8
+{
+    margin-top: 8px !important;
+}
+.mt-16
+{
+    margin-top: 16px !important;
+}
+
+
+.btn{
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    /* margin-left: 50px; */
+    margin-bottom: 8px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+/* MAIN */
 #main {
+  
 }
 #nav
 {
@@ -146,7 +217,7 @@ html{
 #content .content-section
 {
     width: 800px;
-    padding: 64px 0px;
+    padding: 64px 0px 112px;
     margin-left: auto;
     margin-right: auto;
 
@@ -248,18 +319,15 @@ html{
     margin-left: -8px;
     margin-right: 8px; */
     /* Giúp nó căn đều ảnh ra hai bên lề */
-    margin: 32px -8px 0;
+   margin-top: 32px;
     padding-bottom: 48px;
 }
-.place-items{
-    float: left;
-    width: 33.33333% !important;
-}
+
 
 .place-img{
     /* Để ảnh nằm gọn trong thẻ chứa nó không bị to lố */
     width: 100%;
-    padding: 0px 8px;
+    /* padding: 0px 8px; */
     /* sửa để hình bà body chứa nội dung có thể dính nhau - cách ra cho tính chât inline */
     display: block;
 }
@@ -268,10 +336,12 @@ html{
 }
 
 .place-body{
+    
     width: 256px;
     background-color: #fff;
-    margin-left:8px ;
-    padding: 16px;
+    /* margin-left:8px ; */
+   
+    padding-left: 16px;
     font-size: 15px;
 }
 
@@ -292,25 +362,81 @@ html{
 
 }
 
-.place-buy-btn{
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    padding: 11px 16px;
+
+
+/* Contact Form */
+
+.contact-content
+{
+    margin-top: 48px;
+    
+
+}
+.contact-info
+{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info  i[class*="ti-"]
+{
+   
+    width: 30px;
     display: inline-block;
-    margin-top: 15px;
-
+   
 }
-.place-buy-btn:hover{
-    color: #000;
-    background-color: #ccc;
+.contact-form
+{
+    font-size: 15px;
+}
+.contact-form .form-control
+{
+    width: 100%;
+    padding: 10px ;
+        border: 1px solid #ccc;
+}
+/* MAp section */
+.map-section img
+{
+    width: 100%;
 }
 
 
+/* Footer section */
 #footer {
-
+    padding: 64px 16px;
+    text-align: center;
 
 }
+
+#footer .social
+{
+    font-size: 24px;
+    
+}
+#footer .social a{
+   text-decoration: none;
+   color: rgba(0,0,0,0.6);
+}
+#footer .copyright a:hover,
+#footer .social a:hover
+{
+    color: rgba(0,0,0,0.4);
+}
+
+#footer .copyright
+{
+    margin-top: 15px;
+    color: rgba(0,0,0,0.6);
+
+}
+#footer .copyright a
+{
+   
+    color: rgba(0,0,0,0.6);
+}
+
+/* Modal */
  .modal
  {
      position: fixed;
@@ -330,6 +456,7 @@ html{
 }
  .modal-container
  {
+     position: relative;
      background: #fff;
      width: 900px;
      max-width: calc(100% -32px);
@@ -354,6 +481,7 @@ html{
  
  .modal-ti-close
  {
+     position: absolute;
      color: #fff;
      position: absolute;
      right: 0;
